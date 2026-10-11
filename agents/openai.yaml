@@ -1,0 +1,6 @@
+interface:
+  display_name: "Better report"
+  short_description: "Readable experiment reports as Markdown files"
+  default_prompt: "Use $better-report to write Markdown reports for these experiments with readable tables, manuscript comparisons, and a concrete recommendation."
+policy:
+  allow_implicit_invocation: true
