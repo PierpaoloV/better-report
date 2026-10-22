@@ -1,67 +1,57 @@
 # better-report
 
-A reusable Codex skill for clear scientific experiment reports in Markdown. It connects the research question to the evidence, compares results with established benchmarks, and ends with a plain-language recommendation and a concrete next step.
+A reusable skill for reporting the results of a task clearly, with enough project context to understand why they matter and enough detail to understand what was done. It supports research, analyses, experiments, software work and other completed or partial tasks.
 
-Reports are written in **English unless another language is explicitly requested**. The skill produces **Markdown report files only**. PDF conversion requires a separate explicit request.
+## One report, the right level of detail
 
-## What a report contains
+Think of the project as a tree: the root is the problem, branches are areas of work, and leaves are findings or outputs. A project update shows branch headlines. After a specific task, the report briefly orients the reader and then explains the work just completed.
 
-1. **Experiment name** — the report title, with completion status and date.
-2. **Objective** — the question being tested.
-3. **Why this experiment** — why the idea could help and where it came from.
-4. **Available data** — relevant populations, inputs, eligibility and missingness.
-5. **Splits** — training, validation and external evaluation roles.
-6. **Evaluation metrics** — what each metric measures and how uncertainty is assessed.
-7. **Results** — readable tables, confidence intervals when available, benchmark comparisons and relevant figures.
-8. **Conclusions** — an explanation for a non-expert, followed by a recommendation, its reason and the next step.
-9. **Appendix** — complete secondary results, settings, statistical details and reproducibility information.
+The overview and useful detail arrive **together, in one delivery**. The reader does not have to ask for each level or click through a tree. An actual diagram is optional. Limits that change the conclusion stay visible in the summary.
 
-The main body stays readable, with the most useful tables. Remaining technical details belong in the appendix. The skill distinguishes the highest observed score from evidence of a model improvement, and includes attention overlays when those outputs are available and verified.
+The skill leads with the result, explains the decisive actions and their evidence, and keeps detail proportional to the request. A short task can take a few sentences. A substantial report can include comparisons, methods and supporting material. Recommendations and fixed section headings are not mandatory.
 
-## Install
+Use the requested language, format and destination, or the project's established convention. Otherwise use the user's language. Task wrap-ups can stay in chat; requested report files default to Markdown when no format is specified. Other requested formats use the appropriate available tools.
 
-Clone the repository and copy the skill files into your Codex skills directory:
+## Examples
+
+- [New classifier in an existing project](examples/synthetic-report.md): a shared-data overview, three approaches, and the details behind a new 91% result.
+- [Venue research](examples/synthetic-research-report.md): a concise comparison that distinguishes a candidate from a confirmed booking option.
+
+**Both examples are entirely fictional.** They illustrate presentation, not executed work or evaluated model behavior.
+
+Example prompt after completing a task:
+
+```text
+Use $better-report to report what you just completed. Show where it fits in
+the project, then explain the work, results and evidence in the same report.
+Keep other branches at headline level and include the limits that matter.
+```
+
+## Install or test a branch
+
+Clone the repository, check out the revision you want to use, and copy the skill files into your Codex skills directory. To test a review branch, select that branch before copying.
 
 ```bash
 git clone https://github.com/PierpaoloV/better-report.git
+cd better-report
+# To test a branch: git switch <branch-name>
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills/better-report"
-cp better-report/SKILL.md "${CODEX_HOME:-$HOME/.codex}/skills/better-report/"
-cp -R better-report/agents better-report/assets better-report/references "${CODEX_HOME:-$HOME/.codex}/skills/better-report/"
+cp SKILL.md "${CODEX_HOME:-$HOME/.codex}/skills/better-report/"
+cp -R agents assets references "${CODEX_HOME:-$HOME/.codex}/skills/better-report/"
 ```
 
-The package consists of instructions, a template and a conditional survival-reporting reference; it has no required Python dependencies. Its metadata enables normal automatic skill selection, and it can also be invoked explicitly as `$better-report`.
-
-## Example use case
-
-You have finished a benchmark comparing a linear classifier with boosted trees. Saved files contain validation metrics, independent-test metrics and paired bootstrap comparisons. You want a report that explains whether the added complexity helped, without turning a slightly higher point estimate into a claim of superiority.
-
-Example prompt:
-
-```text
-Use $better-report to write an English Markdown report for the completed
-classifier benchmark. Read the saved metric and comparison files in the
-experiment directory. Compare with the established linear baseline, put the
-key tables in the main body, and put technical details in the appendix.
-Explain the findings for a non-expert and give a recommendation and next step.
-Treat data, splits, checkpoints and training code as read-only.
-```
-
-See [the synthetic example report](examples/synthetic-report.md) for the intended format. **Its task, sample counts, metrics and intervals are entirely fictional and illustrate presentation only.** They were not computed from an experiment or taken from a research project.
-
-For your own task, supply the relevant saved artifacts and baseline references. The skill reports available evidence; it does not fit models or fabricate missing results.
+Normal automatic skill selection remains enabled; explicit invocation is `$better-report`. The package contains instructions and examples, with no required Python dependencies or bundled report-generation program.
 
 ## Package contents
 
 | File | Purpose |
 | --- | --- |
-| [SKILL.md](SKILL.md) | Invocation guidance, workflow and reporting requirements |
+| [SKILL.md](SKILL.md) | General reporting instructions and evidence checks |
 | [agents/openai.yaml](agents/openai.yaml) | Skill UI metadata and invocation policy |
-| [assets/report-template.md](assets/report-template.md) | Starting structure for an experiment report |
+| [assets/report-template.md](assets/report-template.md) | Flexible starting point for a substantial report |
+| [references/experiment-reporting.md](references/experiment-reporting.md) | Scientific methods, comparisons and provenance |
 | [references/survival-reporting.md](references/survival-reporting.md) | Additional checks for censoring, survival metrics and risk groups |
-| [examples/synthetic-report.md](examples/synthetic-report.md) | Fictional example showing the report format |
+| [examples/synthetic-report.md](examples/synthetic-report.md) | Fictional experiment report |
+| [examples/synthetic-research-report.md](examples/synthetic-research-report.md) | Fictional research report |
 
-## Scope
-
-Report creation treats source data, splits, features, checkpoints, training code and other agents' work as read-only. It does not authorize new training, changes to labels or endpoints, publication, or external messages. Figures and attention outputs should be attributed to the actual experiment and interpreted within their limits.
-
-This repository contains generic reporting instructions and a synthetic example. It contains no real research data, trained models, experiment results, project reports, patient records, or credentials.
+Reporting does not expand the underlying task's authorization. The skill preserves the actual evidence, distinguishes missing or unverified results, and does not authorize new experiments or external actions by itself. Domain-specific checks remain conditional so that scientific reporting retains its methodological safeguards.

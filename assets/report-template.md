@@ -1,81 +1,46 @@
-# [Experiment name]
+# [Project or task title]
 
-Status: [complete / partial / blocked] · Report date: [YYYY-MM-DD]
+<!-- Optional: date and status when useful. Adapt headings and language to the request.
+     This is one complete report, not a sequence of prompts or interactive views.
+     For a small task, compress it into a few sentences. Remove instructions and
+     unused sections from the delivered report. -->
 
-## Objective
+**[Main result and its meaning. Include any limitation that changes that meaning.]**
 
-[Question, hypothesis, and what the experiment can establish.]
+[One sentence connecting the work to the project goal, when context is needed.]
 
-## Why this experiment
+## Project context
 
-[Mechanism, origin of the idea, linked primary source or dated discussion, and adaptations.]
+<!-- Use a comparison or branch summary only when it helps orient the reader.
+     Keep sibling branches at headline level and identify the newly completed work. -->
 
-## Available data
+| Branch or approach | Result or status |
+| --- | --- |
+| [Relevant existing work] | [Verified headline, including a material limitation if needed] |
+| [Work just completed] | [New result or status] |
 
-| Cohort | Role | Patients | Slides | Deaths / censored or class distribution |
-| --- | --- | --- | --- | --- |
-| [Cohort] | [Development / external] | [N] | [N] | [Counts and percentages] |
+## Work performed
 
-[Endpoint, inclusion criteria, representations and relevant missingness.]
+[Question addressed, approach chosen and why. Explain the decisive actions.]
 
-## Splits
+| Element | What was actually done or found |
+| --- | --- |
+| Inputs | [Relevant source, scope, selection and exclusions] |
+| Method or changes | [Transformations, configuration or implementation needed to understand this task] |
+| Verification | [Checks performed, comparison conditions and findings] |
 
-[Exact frozen split protocol; patient grouping; preprocessing, selection, and external ensembles.]
+<!-- Use prose instead of the table if clearer. Add task-specific detail where
+     needed; never fabricate unavailable settings or checks to fill a row. -->
 
-## Evaluation metrics
+## Meaning and limits
 
-[Plain-language definitions, horizons, direction, confidence intervals, and comparison approach.]
+[Interpretation, with the evidence supporting it and relevant uncertainty or missing information.]
 
-## Results
+[A concrete recommendation or next step only if useful; no mandatory decision label.]
 
-### Development validation
+## Supporting material
 
-| Configuration | [Primary metric, 95% CI] | [Secondary metric, 95% CI] |
-| --- | --- | --- |
-| [Experiment] | [Value and interval] | [Value and interval] |
-| [Applicable manuscript baseline] | [Value and interval] | [Value and interval] |
+<!-- Optional: link sources near the claims instead when sufficient. -->
 
-### External validation
-
-| Configuration | [Primary metric, 95% CI] | [Secondary metric, 95% CI] |
-| --- | --- | --- |
-| [Experiment] | [Value and interval] | [Value and interval] |
-| [Applicable manuscript baseline] | [Value and interval] | [Value and interval] |
-
-[Bold the best point estimates and explain that this is a descriptive ranking.]
-
-### Comparison with manuscript models
-
-[Paired differences and 95% intervals, or why a matched comparison is unavailable.]
-
-[Relevant plot with a meaningful caption, if available.]
-
-## Conclusions
-
-[Explain what was done, whether the question was answered, how it compares to the manuscript, and what uncertainty means for the decision.]
-
-[Discuss verified overlays when available; otherwise say whether this model provides attention.]
-
-**Recommendation:** [Continue / Run a targeted check / Do not invest further in this configuration].
-
-**Reason:** [Evidence tied to the tables.]
-
-**Next step:** [One concrete action; do not execute new experiments as part of reporting.]
-
-## Appendix
-
-### Complete secondary results
-
-[All remaining tables, per-fold details and diagnostics needed for this report.]
-
-### Technical and statistical protocol
-
-[Settings, training budget and selection, score definitions, ensemble, estimator, censoring conventions, bootstrap counts/seed and valid replicates.]
-
-### Sources and reproducibility
-
-[Input artifacts, code/checkpoint references, provenance and versions; exclude credentials.]
-
-### Limitations and anomalies
-
-[Missing outputs, protocol differences, validation qualifications and unresolved issues.]
+[Source artifacts, detailed results, technical protocol or reproducibility information
+needed for this task. Keep essential explanations and consequential limitations above.]

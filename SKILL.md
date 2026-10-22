@@ -1,51 +1,51 @@
 ---
 name: better-report
-description: Create or update scientific experiment reports as Markdown files, with readable main results, technical appendices, manuscript baseline comparisons, and plain-language recommendations. Use for experiment reports, consolidated benchmark reports, and formal reporting of completed or partial experiments. Also use when the user explicitly invokes better-report. PDF conversion requires a separate explicit request. Brief progress questions do not require generating new report files unless requested.
+description: Report the results of completed or partial tasks with a concise project overview, a clear account of the work performed, and supporting evidence. Use for task wrap-ups, research findings, analyses, experiment reports, and updates to existing reports, or when explicitly invoked. Adapt the depth to the request; ordinary conversation does not need a formal report.
 ---
 
 # Better report
 
-Produce reports that let the reader understand the question, the evidence, and the next decision. Write all report content in English, including titles, narrative, table labels, figure captions, conclusions, recommendations, and appendices. Use another language only when explicitly requested.
+Let the reader understand the result at a glance and the work behind it in the same delivery. Every sentence should help them understand, assess, or use the result.
 
-## Workflow
+## Show the project at the right scale
 
-1. Identify the requested experiments, their completion status, frozen populations and protocols, and the applicable manuscript or established benchmark baselines. Read saved metrics, comparisons, manifests, and existing figures before writing. Ask only for a material ambiguity that cannot be resolved from these sources.
-2. Create a dedicated, dated report directory. Treat source data, clinical CSVs, splits, features, checkpoints, training code, and other agents' directories as read-only. Report creation does not authorize training, changing endpoints, new statistical experiments, publishing, or sending messages. Preserve existing reports unless their replacement was requested.
-3. For survival experiments, read [survival-reporting.md](references/survival-reporting.md). Use [report-template.md](assets/report-template.md) for each experiment. A consolidated report may share common data/split/metric sections, but must give each experiment its own title, objective, rationale, results, and conclusions, with explicit references to shared sections.
-4. Write a readable main body with the most useful tables and figures. Put all remaining technical detail, complete secondary results, settings, provenance, and limitations in the appendix. Keep information that changes interpretation in the main body. Do not impose a page limit or create a separate full-page cover.
-5. Deliver the completed `.md` report files. Check that every linked figure resolves, tables are readable, and numeric values match their sources. Link the Markdown deliverables in the final reply. PDF conversion is a separate task requiring a separate explicit user request; this reporting workflow does not automatically create PDF, HTML, or rendering-provenance files.
+Think of a project as a tree: the root is the problem, branches are areas of work or approaches, and leaves are concrete findings or outputs. Use this to organize information; draw a tree only when it helps.
 
-## Mandatory order and content
+- For a project overview, show the objective, the relevant branches, and their result or status headlines.
+- After a specific task, briefly locate the work in the project, update the relevant comparison or status, then explain that task in enough detail to understand what happened.
+- For a focused question, concentrate on that branch or result and include only the context needed to interpret it. A small standalone task may need just a few sentences.
 
-Use these sections in this order. The experiment name is the document title.
+Deliver the useful overview and task detail together. Do not make the reader ask follow-up questions or open interactive nodes to learn what was done. Important limitations must remain visible in the summary. Keep shared facts and numbers consistent across levels; refer back to shared inputs rather than duplicating their description.
 
-| Section | Required content |
-| --- | --- |
-| Objective | The precise question or hypothesis and what a useful result would establish. |
-| Why this experiment | Why the method could help; where the idea came from (primary paper, a dated user discussion, or a methodological rationale). Cite the source and describe adaptations. Do not claim an exact reproduction unless verified. |
-| Available data | Relevant cohorts, patients, slides, events/censoring or class counts, eligibility, endpoint, representations, resolution, ROI and material missingness. Verify current counts; do not reuse old cover statistics. |
-| Splits | Frozen protocol, patient-level grouping, fold counts and roles, selection/tuning procedure, training-only preprocessing, and external ensemble construction. |
-| Evaluation metrics | Brief definitions, direction of improvement, horizons and units, uncertainty method, and how models are compared. Detailed estimators belong in the appendix. |
-| Results | Tables with estimates and 95% confidence intervals when available; manuscript comparators and paired differences where available; meaningful figures with explanatory captions. Mark missing and pending results explicitly. |
-| Conclusions | Explain what was done and learned in everyday language, compare with the principal manuscript experiments, interpret available overlays, and give an explicit recommendation with its reason and next concrete step. |
+## Write the report
 
-## Tables and figures
+1. Read the request and available evidence: the work just performed, saved outputs, relevant project context, and existing reports. Identify the goal, the affected branch, and what changed. Use the context available; do not invent missing branches or start a project-wide audit to fill a template.
+2. Lead with the main result and its meaning for the goal. Distinguish work completed, checks performed, and outcomes established. A completed investigation may still have an inconclusive answer.
+3. Orient the reader with a short paragraph, list, or comparison table. Keep other branches at headline level unless they affect the result. Distinguish prior results from the work just completed, and label unavailable or outdated information when it matters.
+4. Explain the decisive work: the question addressed, why the approach was chosen, relevant inputs and their transformations, method or changes, checks actually performed, and findings. Include the specifics needed to understand or reproduce the focal task. Put lengthy supporting material in a linked source or appendix; keep the explanation self-contained.
+5. State what the evidence supports and any limitation that changes the conclusion. Recommend a next step only when it serves the task; completed work may need no further action.
 
-- Separate development CV and external results when combining them would make a table hard to read. Label validation results accurately. Include the primary configurations and relevant controls; preserve complete results in the appendix rather than hiding unsuccessful configurations.
-- Use readable names, consistent decimal precision, and estimate plus interval (for example `0.710 [0.640, 0.780]`). Prefer at most five columns per table; split large grids logically. Define abbreviations once. Use percentages together with denominators.
-- Bold the highest point estimate per metric and population, including comparators. Identify this as a descriptive ranking. Show paired differences separately; do not turn a rank into a claim of demonstrated superiority. For error metrics, highlight the lowest estimate.
-- Compare against the applicable principal manuscript experiment on matching patients, endpoints, score conventions, and estimators. Explain a mismatch instead of calculating an invalid difference. Cross-study values are contextual references, not paired comparisons.
-- Use figures that answer a question: discrimination or paired-difference forest plots, justified learning curves, calibration, survival curves, or verified attention overlays. Every figure needs an explanation of what it shows and why it matters. Reuse relevant existing figures; avoid decorative or redundant plots.
-- If attention exists, include verified WSI overlays and, when informative, matched low/high risk cases or cross-model views of the same slides. State case-selection criteria, model/fold or ensemble, color scale, ROI, and patch alignment. Show representative high-attention patches when available. Attention indicates model weighting; it does not establish tissue identity or a causal mechanism. Distinguish visual hypotheses from pathologist-confirmed findings. If this model has no attention output, say so and do not substitute another model's map.
+Use [report-template.md](assets/report-template.md) as a flexible starting point for a substantial report. Combine or omit sections that add nothing; honor the user's requested structure. Brevity comes from selecting relevant information, not withholding the explanation or stripping out essential methods.
 
-## Conclusions and recommendations
+## Keep claims grounded
 
-Explain the input, the change being tested, and its practical result as if addressing a non-expert. Answer the objective directly, with numbers from the tables. Distinguish ranking patients, separating risk groups, and predicting an individual's survival probability. Explain material uncertainty plainly without drowning the reader in caveats.
+- Connect decisive claims to the relevant file, source, observation, or check. For derived numbers, give the denominator, units, or calculation needed to interpret them. Link evidence near the claim when practical; reserve long provenance lists for an appendix.
+- Make observations, calculations, interpretations, assumptions, and proposals distinguishable in ordinary prose. Never invent a missing method, result, source, or verification. Absence from the searched material is not proof of absence everywhere.
+- Compare like with like: matching populations, time periods, definitions, or test conditions as applicable. Explain mismatches. Report uncertainty when available; a higher score alone does not establish a reliable improvement. For changing external information, identify the relevant date or version.
+- Match the verification to the work. Research needs relevant sources, search scope and material disagreements; quantitative analysis needs traceable inputs and calculations; software work needs the changed behavior and checks actually run. Preserve failed or inconclusive findings that affect the answer.
 
-End with one recommendation: **Continue**, **Run a targeted check**, or **Do not invest further in this configuration**. Give the evidence, the unresolved question (if any), and one concrete next step. A disappointing result alone does not prove that the data are the cause. A positive result alone does not establish clinical usefulness.
+Reporting does not expand the authorized task. Read source artifacts without rewriting them merely to produce a report. Checking a total or a link can be part of reporting; new experiments, model fitting, publication, or deployment require authorization from the underlying task. Respect authorization already given. Exclude credentials and identifiable patient information.
 
-## Deliverables and checks
+## Presentation and delivery
 
-Produce Markdown report files only. Include status and date below the title. The appendix contains the full technical protocol, secondary tables, artifact/source paths, source hashes when available, and reproducibility details. Keep credentials and identifiable patient information out of reports.
+Use the requested language, format, and destination, or an established project convention. Otherwise follow the user's language. A normal task wrap-up can stay in chat; create or update a report file when requested or established by the workflow. Default to Markdown when a file is needed and no format was specified; use appropriate tools for other requested formats.
 
-Before delivery, reconcile counts and key estimates against saved sources; verify bolding and paired-difference direction; check that prose does not imply completion of pending experiments; inspect Markdown structure and image links; and confirm the original inputs were not changed. For a brief status reply, apply the same clarity and comparison principles without regenerating files automatically.
+Use tables for genuine comparisons and figures when they explain more efficiently than prose. Give numbers consistent precision, readable labels, units and denominators. Explain what a figure establishes. Highlight a best value only when meaningful and identify descriptive rankings as such. Avoid repeating the same result in every section.
+
+When updating a report, preserve valid context, integrate new evidence, and make consequential changes clear. Use an existing destination when appropriate; a new dated directory is optional. Include a date, status, and supporting appendix when they help interpret the report. Link any delivered files.
+
+Before delivery, check the main conclusion against its evidence, reconcile key counts and comparisons, check links, and ensure completed actions are not confused with proposed or unverified ones. Remove text that does not help the reader understand, assess, or use the result.
+
+## Scientific experiments
+
+For scientific experiments, read [experiment-reporting.md](references/experiment-reporting.md). For survival analyses, also read [survival-reporting.md](references/survival-reporting.md). Apply their methodological checks within the same concise overview-plus-detail report.
