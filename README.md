@@ -8,7 +8,7 @@ Think of the project as a tree: the root is the problem, branches are areas of w
 
 The overview and useful detail arrive **together, in one delivery**. The reader does not have to ask for each level or click through a tree. An actual diagram is optional. Limits that change the conclusion stay visible in the summary.
 
-The skill leads with the result, explains the decisive actions and their evidence, and keeps detail proportional to the request. A short task can take a few sentences. A substantial report can include comparisons, methods and supporting material. Recommendations and fixed section headings are not mandatory.
+The skill leads with the result, explains the decisive actions and their evidence, and keeps detail proportional to the request. The body contains what the reader needs to understand and judge the work; detailed settings and secondary results belong in supporting material. Existing figures are optional and must add understanding. When further action is useful, the report closes in prose with what to do, why now and what it enables. A completed task may need no next step, and fixed section headings are not mandatory.
 
 Use the requested language, format and destination, or the project's established convention. Otherwise use the user's language. Task wrap-ups can stay in chat; requested report files default to Markdown when no format is specified. Other requested formats use the appropriate available tools.
 

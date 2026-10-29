@@ -6,12 +6,14 @@ Use these checks when the task concerns scientific experiments. Keep the report'
 
 - State the question and why the approach could help. Cite the primary paper, dated discussion or methodological rationale when relevant; describe adaptations and claim exact reproduction only when verified.
 - Verify current populations, eligibility, endpoint, inputs, missingness, and class or event counts from saved sources. In biomedical work, distinguish patients and slides; report representation, resolution and ROI when they affect interpretation.
-- Describe the frozen evaluation protocol: grouping unit, split or fold roles, tuning and checkpoint selection, training-only preprocessing, and external ensemble construction. Distinguish development validation, an independent internal test if one exists, and external evaluation.
-- Explain each reported metric briefly, including direction, units, horizons and the available uncertainty method. Preserve the actual protocol; missing estimates or settings stay explicitly unavailable.
+- Explain the evaluation choices needed to interpret the result: grouping unit, split or fold roles, tuning and checkpoint selection, training-only preprocessing, and external ensemble construction. Distinguish development validation, an independent internal test if one exists, and external evaluation. Put layer dimensions, optimizer settings and the full reproducibility protocol in methods or supporting material unless they are the question being investigated.
+- Give metric labels, units, horizons, denominators and available uncertainty. Explain unfamiliar terms only when needed by the audience; avoid a metric glossary in the main report. Prefer readable counts to unexplained abbreviations for mixed audiences. Preserve the actual protocol; missing estimates or settings stay explicitly unavailable when material.
 
 ## Report and compare results
 
 Use relevant saved metrics, comparisons, manifests and figures. Compare with the applicable manuscript or established benchmark on matching patients, endpoints, score conventions and estimators. Cross-study values provide context; they are not paired comparisons. When the same input supports multiple approaches, describe it once and identify any departures in the focal experiment.
+
+For a project status report, focus the body on the selected model and summarize the route to it; retain full model-search tables in supporting material. For a comparison task, keep the alternatives needed to answer that comparison in the body. There is no universal one-model limit.
 
 Report estimates with saved 95% confidence intervals when available. Keep development and external results separate when needed for readability. Show paired differences with their direction and intervals when available; separate model intervals cannot establish a between-model difference. Mark the best point estimate as a descriptive ranking, including the comparator; lower is better for error metrics. Keep consequential negative findings visible and preserve relevant secondary or per-fold results in supporting material.
 
@@ -19,12 +21,12 @@ Reading saved results and checking arithmetic are reporting activities. Re-evalu
 
 ## Figures and attention
 
-Reuse relevant figures that answer the experimental question, with captions explaining what they show and why it matters. Suitable figures may include discrimination or paired-difference plots, learning curves, calibration or survival curves. Do not add redundant plots to fill a template.
+Reuse an existing figure for the focal model or comparison when it adds understanding beyond the text or table, with a caption explaining what it shows and why it matters. Suitable figures may include discrimination or paired-difference plots, learning curves, calibration or survival curves. A figure is optional; do not create or include a redundant plot to fill a template.
 
 When attention outputs are relevant and available, include verified overlays and representative patches where useful. State case-selection criteria, image/mask identity, feature-coordinate alignment, physical resolution, ROI, normalization or color scale, and model/fold or ensemble attribution. Do not substitute another model's map. Attention indicates model weighting; distinguish visual hypotheses from pathologist-confirmed findings and avoid causal or tissue-identity claims unsupported by evidence. If an expected overlay is unavailable or unverifiable, say so; unrelated reports need no attention disclaimer.
 
 ## Interpret and preserve provenance
 
-Answer the experimental question in plain language. A positive result alone does not establish clinical usefulness; a disappointing result alone does not establish that the data are the cause. Carry limitations that change interpretation into the opening summary.
+Answer the experimental question in plain language. A positive result alone does not establish clinical usefulness; a disappointing result alone does not establish that the data are the cause. Carry limitations that change the headline into the opening summary; explain other material limits next to the result or in a short limits paragraph. State their practical consequence rather than narrating what the report did not verify.
 
 Keep the detailed protocol, secondary tables, settings, source paths, code/checkpoint references, versions, and source hashes when available in supporting material. Include what is needed to inspect or reproduce the reported work, without copying entire logs into the main report.

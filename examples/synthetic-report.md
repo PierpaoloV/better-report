@@ -25,12 +25,12 @@ The new experiment tests whether changing the classifier improves routing while 
 | Shared split | By opening date: first 8,000 tickets for training, next 2,000 for validation, final 2,000 for test. One record per ticket. |
 | Shared transformation | Lowercase text; TF-IDF on single words and word pairs, fitted only on the training set and reused for both classifiers. |
 | New configuration | Linear SVM with C = 1, fixed before evaluation; no hyperparameter search in this experiment. |
-| Evaluation | Frozen models evaluated on the same 2,000 test tickets. Accuracy is the number routed correctly divided by 2,000. B: 1,820 correct; A: 1,760; rules: 1,520. |
+| Evaluation | Frozen models evaluated on the same 2,000 test tickets. B: 1,820 correct; A: 1,760; rules: 1,520. |
 
 ## Meaning and limits
 
 The new model gains **3 percentage points** over classifier A. Errors fall from 240 to 180: **60 fewer, a 25% relative reduction**. This is the strongest observed result among the three approaches on this test.
 
-Validation-set results, category-level errors and paired uncertainty estimates are unavailable in the example. The historical comparison does not establish reliability in live use. Examining which departments gain or lose accuracy would help assess whether a pilot is justified.
+Validation-set results, category-level errors and paired uncertainty estimates are unavailable in the example. The historical comparison does not establish reliability in live use.
 
-No real datasets, model artifacts or source files underpin this illustration. In a real report, the metric and protocol artifacts would be linked next to the relevant results or in supporting material.
+The next useful step is to compare errors by department on these same test tickets. The overall gain could conceal a deterioration for an individual department; locating those changes would help decide whether, and where, a pilot is justified.

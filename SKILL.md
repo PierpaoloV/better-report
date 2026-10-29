@@ -15,17 +15,19 @@ Think of a project as a tree: the root is the problem, branches are areas of wor
 - After a specific task, briefly locate the work in the project, update the relevant comparison or status, then explain that task in enough detail to understand what happened.
 - For a focused question, concentrate on that branch or result and include only the context needed to interpret it. A small standalone task may need just a few sentences.
 
-Deliver the useful overview and task detail together. Do not make the reader ask follow-up questions or open interactive nodes to learn what was done. Important limitations must remain visible in the summary. Keep shared facts and numbers consistent across levels; refer back to shared inputs rather than duplicating their description.
+Deliver the useful overview and task detail together. Do not make the reader ask follow-up questions or open interactive nodes to learn what was done. Keep limitations that change the headline in the opening; explain other material limits alongside the result or in a short limits paragraph. Keep shared facts and numbers consistent across levels; refer back to shared inputs rather than duplicating their description.
 
 ## Write the report
 
 1. Read the request and available evidence: the work just performed, saved outputs, relevant project context, and existing reports. Identify the goal, the affected branch, and what changed. Use the context available; do not invent missing branches or start a project-wide audit to fill a template.
 2. Lead with the main result and its meaning for the goal. Distinguish work completed, checks performed, and outcomes established. A completed investigation may still have an inconclusive answer.
 3. Orient the reader with a short paragraph, list, or comparison table. Keep other branches at headline level unless they affect the result. Distinguish prior results from the work just completed, and label unavailable or outdated information when it matters.
-4. Explain the decisive work: the question addressed, why the approach was chosen, relevant inputs and their transformations, method or changes, checks actually performed, and findings. Include the specifics needed to understand or reproduce the focal task. Put lengthy supporting material in a linked source or appendix; keep the explanation self-contained.
-5. State what the evidence supports and any limitation that changes the conclusion. Recommend a next step only when it serves the task; completed work may need no further action.
+4. Explain the decisive work: the question addressed, why the approach was chosen, relevant inputs and their transformations, method or changes, checks actually performed, and findings. Keep what the reader needs to understand and judge the focal task in the body. Put implementation settings, full reproducibility details and secondary results in linked methods or supporting material. Keep relevant alternatives in the body when comparison is the task; a status report can focus on the selected approach and summarize its development path.
+5. State what the evidence supports and any limitation that changes the conclusion. When further action serves the task, close the main report with a short prose paragraph explaining what to do, why now and what it would resolve or enable. Ground the priority in the evidence; do not invent effort estimates or declare other work deferrable without a basis. Completed work may need no further action.
 
 Use [report-template.md](assets/report-template.md) as a flexible starting point for a substantial report. Combine or omit sections that add nothing; honor the user's requested structure. Brevity comes from selecting relevant information, not withholding the explanation or stripping out essential methods.
+
+Write about the project, not the mechanics of producing its report. Remove editorial assurances such as "not silently combined here", "not newly certified here" or narration of replacing outdated entries. Express consequential gaps as project facts and explain their effect: "The review and prediction export contain different counts, so the review denominator remains unresolved." Distinguish saved results from new work when that distinction affects interpretation or was requested; keep routine reporting provenance in supporting material. Use language familiar to the intended audience, with counts and denominators where clearer than abbreviations. Define a term in the body only when necessary to understand the result; put other definitions in supporting material or omit them.
 
 ## Keep claims grounded
 
@@ -40,7 +42,7 @@ Reporting does not expand the authorized task. Read source artifacts without rew
 
 Use the requested language, format, and destination, or an established project convention. Otherwise follow the user's language. A normal task wrap-up can stay in chat; create or update a report file when requested or established by the workflow. Default to Markdown when a file is needed and no format was specified; use appropriate tools for other requested formats.
 
-Use tables for genuine comparisons and figures when they explain more efficiently than prose. Give numbers consistent precision, readable labels, units and denominators. Explain what a figure establishes. Highlight a best value only when meaningful and identify descriptive rankings as such. Avoid repeating the same result in every section.
+Use tables for genuine comparisons. Reuse an existing, relevant figure when it explains the focal result more efficiently than prose or a table; availability alone is not a reason to include it. Omit it when redundant or unverifiable, unless resolving its absence is part of the task. Give numbers consistent precision, readable labels, units and denominators. Explain what a figure establishes. Highlight a best value only when meaningful and identify descriptive rankings as such. Avoid repeating the same result in every section.
 
 When updating a report, preserve valid context, integrate new evidence, and make consequential changes clear. Use an existing destination when appropriate; a new dated directory is optional. Include a date, status, and supporting appendix when they help interpret the report. Link any delivered files.
 
