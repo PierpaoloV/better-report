@@ -13,7 +13,7 @@ Use these checks when the task concerns scientific experiments. Keep the report'
 
 Use relevant saved metrics, comparisons, manifests and figures. Compare with the applicable manuscript or established benchmark on matching patients, endpoints, score conventions and estimators. Cross-study values provide context; they are not paired comparisons. When the same input supports multiple approaches, describe it once and identify any departures in the focal experiment.
 
-For a project status report, focus the body on the selected model and summarize the route to it; retain full model-search tables in supporting material. For a comparison task, keep the alternatives needed to answer that comparison in the body. There is no universal one-model limit.
+For a project status report, focus the body on the selected model and summarize the route to it; retain full model-search tables in supporting material. Preserve a concise benchmark comparison when it explains the model's purpose or prevents an unsupported performance claim. For a comparison task, keep the alternatives needed to answer that comparison in the body. There is no universal one-model limit.
 
 Report estimates with saved 95% confidence intervals when available. Keep development and external results separate when needed for readability. Show paired differences with their direction and intervals when available; separate model intervals cannot establish a between-model difference. Mark the best point estimate as a descriptive ranking, including the comparator; lower is better for error metrics. Keep consequential negative findings visible and preserve relevant secondary or per-fold results in supporting material.
 
@@ -28,5 +28,7 @@ When attention outputs are relevant and available, include verified overlays and
 ## Interpret and preserve provenance
 
 Answer the experimental question in plain language. A positive result alone does not establish clinical usefulness; a disappointing result alone does not establish that the data are the cause. Carry limitations that change the headline into the opening summary; explain other material limits next to the result or in a short limits paragraph. State their practical consequence rather than narrating what the report did not verify.
+
+Keep manuscript errors and conflicting analysis definitions visible in the body as corrections or checks to complete. For conflicting primary/secondary designations, consult the documented plan and chronology; a more favorable result does not justify relabeling an analysis. Distinguish a source's account of a decision from a verified protocol, and make the unresolved consequence explicit.
 
 Keep the detailed protocol, secondary tables, settings, source paths, code/checkpoint references, versions, and source hashes when available in supporting material. Include what is needed to inspect or reproduce the reported work, without copying entire logs into the main report.

@@ -14,7 +14,8 @@
 <!-- Use a comparison or branch summary only when it helps orient the reader.
      Keep sibling branches at headline level and identify the newly completed work.
      Focus on the selected approach for a status report; retain relevant alternatives
-     in the body when comparison is the task. -->
+     when comparison is the task or a comparator explains the selected approach.
+     Each row needs a concrete headline, with the decisive number when available. -->
 
 | Branch or approach | Result or status |
 | --- | --- |
@@ -35,12 +36,15 @@
      needed to understand and judge the result. Put detailed settings, architecture,
      secondary results and nonessential definitions in supporting material.
      Never fabricate unavailable settings or checks to fill a row. An existing
-     figure is optional: include it only if it helps explain the focal result. -->
+     figure is optional: include it only if it helps explain the focal result.
+     Identify its plotted groups and map aliases to the names used in the text. -->
 
 ## Meaning and limits
 
 [Interpretation, with the evidence supporting it and relevant uncertainty or missing information.
-Describe project facts and their consequences, without commentary on preparing the report.]
+Describe project facts and their consequences, without commentary on preparing the report.
+Keep inconsistencies that affect a conclusion, correction or decision here in the body:
+what conflicts, why it matters and what needs correcting or checking.]
 
 <!-- Close the main report in prose when further action is useful. This paragraph
      needs no fixed heading or recommendation label. A full appendix may follow it. -->
