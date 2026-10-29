@@ -21,13 +21,13 @@ Reading saved results and checking arithmetic are reporting activities. Re-evalu
 
 ## Figures and attention
 
-Reuse an existing figure for the focal model or comparison when it adds understanding beyond the text or table, with a caption explaining what it shows and why it matters. Suitable figures may include discrimination or paired-difference plots, learning curves, calibration or survival curves. A figure is optional; do not create or include a redundant plot to fill a template.
+Reuse an existing figure for the focal model or comparison when it adds understanding beyond the text or table. Use a short caption to explain the result and its consequence; do not transcribe a readable legend. Keep essential population or label mappings nearby. Suitable figures may include discrimination or paired-difference plots, learning curves, calibration or survival curves. A figure is optional; do not create or include a redundant plot to fill a template.
 
 When attention outputs are relevant and available, include verified overlays and representative patches where useful. State case-selection criteria, image/mask identity, feature-coordinate alignment, physical resolution, ROI, normalization or color scale, and model/fold or ensemble attribution. Do not substitute another model's map. Attention indicates model weighting; distinguish visual hypotheses from pathologist-confirmed findings and avoid causal or tissue-identity claims unsupported by evidence. If an expected overlay is unavailable or unverifiable, say so; unrelated reports need no attention disclaimer.
 
 ## Interpret and preserve provenance
 
-Answer the experimental question in plain language. A positive result alone does not establish clinical usefulness; a disappointing result alone does not establish that the data are the cause. Carry limitations that change the headline into the opening summary; explain other material limits next to the result or in a short limits paragraph. State their practical consequence rather than narrating what the report did not verify.
+Answer the experimental question in plain language. A positive result alone does not establish clinical usefulness; a disappointing result alone does not establish that the data are the cause. Carry limitations that change the headline into the opening summary; explain other material limits next to the result or in a short limits paragraph. State their practical consequence rather than narrating what the report did not verify. Keep study-size constraints and future validation needs separate from manuscript corrections; do not present a new study as an immediate editing task.
 
 Keep manuscript errors and conflicting analysis definitions visible in the body as corrections or checks to complete. For conflicting primary/secondary designations, consult the documented plan and chronology; a more favorable result does not justify relabeling an analysis. Distinguish a source's account of a decision from a verified protocol, and make the unresolved consequence explicit.
 

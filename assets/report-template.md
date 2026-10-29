@@ -37,14 +37,17 @@
      secondary results and nonessential definitions in supporting material.
      Never fabricate unavailable settings or checks to fill a row. An existing
      figure is optional: include it only if it helps explain the focal result.
-     Identify its plotted groups and map aliases to the names used in the text. -->
+     Give its takeaway in a short caption without repeating a readable legend.
+     Map aliases to the report's terminology in nearby text when needed. -->
 
 ## Meaning and limits
 
 [Interpretation, with the evidence supporting it and relevant uncertainty or missing information.
 Describe project facts and their consequences, without commentary on preparing the report.
-Keep inconsistencies that affect a conclusion, correction or decision here in the body:
-what conflicts, why it matters and what needs correcting or checking.]
+Describe comparisons naturally and keep enduring limitations in their own paragraph.]
+
+[In a separate paragraph when needed: inconsistencies requiring a correction or decision,
+what conflicts, why it matters and what needs correcting or checking now.]
 
 <!-- Close the main report in prose when further action is useful. This paragraph
      needs no fixed heading or recommendation label. A full appendix may follow it. -->
