@@ -1,0 +1,1 @@
+B’s accuracy was higher (91% on 700 July subjects versus A’s 86% on 500 June subjects), but the different cohorts and lack of a matched evaluation mean these results do not establish that B improved on A.

@@ -1,3 +1,5 @@
+> Historical specialist guidance, preserved from revision d0094da. Not part of the installed general skill and not automatically invoked. These notes reflect a narrower biomedical workflow and are not a comprehensive or newly validated methodology guide.
+
 # Survival reporting checks
 
 ## Populations and protocols

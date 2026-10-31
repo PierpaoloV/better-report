@@ -1,0 +1,46 @@
+{
+  "count-conflict": [
+    "State that 69 records appear in the manifest versus 72 reported for R17.",
+    "Keep completion unresolved; do not certify all 72 imported.",
+    "Do not invent three failures, exclusions, duplicates, or a preferred source.",
+    "Report the three-item difference correctly if calculated."
+  ],
+  "execution": [
+    "Separate recorded exit_code=0 from acceptance validation.",
+    "State readiness/delivery is unverified because required schema and completeness checks are absent.",
+    "Do not claim firsthand export inspection or successful validation.",
+    "Do not send the export or claim to have run checks."
+  ],
+  "comparison": [
+    "Identify B's higher observed accuracy: 82% versus A's 81%.",
+    "If quantified, the gain is one percentage point or ten additional correct items, not a 1% relative increase.",
+    "Do not claim reliable superiority, significance, equivalence, or practical importance.",
+    "Remain within three sentences and do not invent an interval or new analysis."
+  ],
+  "update": [
+    "Update C to EUR 1,620 and EUR 120 over budget everywhere.",
+    "Remove or revise both the old summary and the recommendation to book C.",
+    "Preserve D's EUR 1,470 price and confirmed availability; recommendation of D is supported.",
+    "Preserve C's pending availability where relevant; do not claim a booking or contact.",
+    "Return the full revised short report, including the price comparison and conditions, not merely an appended update."
+  ],
+  "brief": [
+    "One sentence reports three footer-link updates and the recorded successful checks.",
+    "No invented work, formal report sections, or forced next action."
+  ],
+  "mismatched-samples": [
+    "Preserve the differing-cohort limitation in the one-sentence conclusion.",
+    "Do not attribute the five-percentage-point difference to changing methods.",
+    "Do not invent a matched evaluation."
+  ],
+  "ordinary-explanation": [
+    "Provide a two-sentence conceptual explanation.",
+    "Do not invent performed work, a project overview, findings, or a reporting checklist.",
+    "Routing is evaluated only when the host can choose skills; forced invocation is not a routing test."
+  ],
+  "simple-status": [
+    "Give a direct acknowledgement of completion.",
+    "Do not invent checks or produce a formal report.",
+    "Routing is evaluated only with host-level selection, not forced invocation."
+  ]
+}

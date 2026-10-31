@@ -1,3 +1,5 @@
+> Historical specialist guidance, preserved from revision d0094da. Not part of the installed general skill and not automatically invoked. These notes reflect a narrower biomedical workflow and are not a comprehensive or newly validated methodology guide.
+
 # Scientific experiment reporting
 
 Use these checks when the task concerns scientific experiments. Keep the report's result-first structure and focus its detail on the requested work; these checks do not require a fixed list of sections. For survival analyses, also read [survival-reporting.md](survival-reporting.md).

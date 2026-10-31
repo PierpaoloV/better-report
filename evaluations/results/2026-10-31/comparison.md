@@ -1,0 +1,1 @@
+Method B had higher observed accuracy on heldout-Q: 82% (820/1,000), versus 81% (810/1,000) for Method A—a 1 percentage point advantage on the same items and scoring rule. No uncertainty analysis or reliability threshold was supplied, so these results establish the observed ranking but not a reliable performance advantage.

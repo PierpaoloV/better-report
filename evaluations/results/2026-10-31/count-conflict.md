@@ -1,0 +1,1 @@
+R17’s completion remains unverified. The operator note reports all 72 orders imported with no failures, but the manifest records 69 records and 69 unique order IDs. No exclusion list or reconciliation record explains the three-order discrepancy; reconcile it before confirming full completion.

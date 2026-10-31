@@ -1,64 +1,42 @@
-# [Project or task title]
+# [Task or project title]
 
-<!-- Optional: date and status when useful. Adapt headings and language to the request.
-     This is one complete report, not a sequence of prompts or interactive views.
-     For a small task, compress it into a few sentences. Remove instructions and
-     unused sections from the delivered report. -->
+<!-- Optional date/version/status. Adapt to the requested audience, purpose and language.
+For a small task, replace this template with a few sentences.
+Remove all instructions and unused sections before delivery.
+Preserve accuracy and decision-changing limitations before optimizing brevity. -->
 
-**[Main result and its meaning. Include a limitation here if it changes the headline.]**
+**[Main result and its meaning; include any limitation that changes this conclusion.]**
 
-[One sentence connecting the work to the project goal, when context is needed.]
+[Only the context needed to understand the question or decision.]
 
-## Project context
+## Findings and work performed
 
-<!-- Use a comparison or branch summary only when it helps orient the reader.
-     Keep sibling branches at headline level and identify the newly completed work.
-     Focus on the selected approach for a status report; retain relevant alternatives
-     when comparison is the task or a comparator explains the selected approach.
-     Each row needs a concrete headline, with the decisive number when available. -->
+[Explain the decisive inputs, approach and rationale, changes, checks actually performed,
+and findings. Distinguish reported activity from firsthand verification.]
 
-| Branch or approach | Result or status |
-| --- | --- |
-| [Relevant existing work] | [Verified headline, including a material limitation if needed] |
-| [Work just completed] | [New result or status] |
+<!-- Use a table only for a genuine comparison. Retain a decisive comparator.
+Do not mix incompatible versions, periods or populations. -->
 
-## Work performed
-
-[Question addressed, approach chosen and why. Explain the decisive actions.]
-
-| Element | What was actually done or found |
-| --- | --- |
-| Inputs | [Relevant source, scope, selection and exclusions] |
-| Method or changes | [Transformations, configuration or implementation needed to understand this task] |
-| Verification | [Checks performed, comparison conditions and findings] |
-
-<!-- Use prose instead of the table if clearer. Add task-specific detail where
-     needed to understand and judge the result. Put detailed settings, architecture,
-     secondary results and nonessential definitions in supporting material.
-     Never fabricate unavailable settings or checks to fill a row. An existing
-     figure is optional: include it only if it helps explain the focal result.
-     Give its takeaway in a short caption without repeating a readable legend.
-     Map aliases to the report's terminology in nearby text when needed. -->
+| Approach or item | Result or status | Evidence or qualification |
+| --- | --- | --- |
+| [Relevant item] | [Concrete finding, with units/denominator if needed] | [Source/version and material condition] |
 
 ## Meaning and limits
 
-[Interpretation, with the evidence supporting it and relevant uncertainty or missing information.
-Describe project facts and their consequences, without commentary on preparing the report.
-Describe comparisons naturally and keep enduring limitations in their own paragraph.]
+[Interpret the evidence. Keep uncertainty, negative findings and contradictions that affect
+the answer visible. If a missing input blocks the main conclusion, say so in the opening,
+then give the supported partial result. Do not invent a cause or choose a source silently.]
 
-[In a separate paragraph when needed: inconsistencies requiring a correction or decision,
-what conflicts, why it matters and what needs correcting or checking now.]
+[When updating: replace affected prior conclusions consistently, including recommendations.
+Explain a consequential change; mark dependent material that remains stale.]
 
-<!-- Close the main report in prose when further action is useful. This paragraph
-     needs no fixed heading or recommendation label. A full appendix may follow it. -->
-
-[The useful next step, why it matters now and what it would resolve or enable.
-Ground the priority in the evidence; do not assume the work is quick or that other
-work can wait. Omit this paragraph if the task needs no further action.]
+[Optional closing paragraph: the next useful action, why it follows from the findings,
+and what it would resolve. Keep enduring limitations separate when timing differs.]
 
 ## Supporting material
 
-<!-- Optional appendix: link sources near the claims instead when sufficient. -->
+<!-- Optional. Keep evidence needed to judge the conclusion in the main body.
+Detailed settings, secondary results, source versions and reproducibility information
+can go here. Direct source links near claims may be enough. -->
 
-[Source artifacts, detailed results, technical protocol or reproducibility information
-needed for this task. Keep essential explanations and consequential limitations above.]
+[Supporting artifacts and details.]
